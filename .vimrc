@@ -84,3 +84,11 @@ nnoremap [git]c :Gcommit<Enter>
 nnoremap [git]d :Gdiff<Enter>
 nnoremap [git]v :Gitv<Enter>
 nnoremap [git]b :Gblame<Enter>
+
+" vim-indent-guides
+colorscheme desert
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
+let g:indent_guides_guide_size=1
