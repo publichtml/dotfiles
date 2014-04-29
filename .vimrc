@@ -29,3 +29,28 @@ NeoBundle 'scrooloose/syntastic'
 
 filetype plugin indent on     " required!
 filetype indent on
+
+" uniteをインサートモードでスタート
+let g:unite_enable_start_insert = 1
+
+" 初期設定関数を起動する
+autocmd filetype unite call s:unite_my_settings()
+
+" Unite overwrite settings.
+function! s:unite_my_settings()"{{{
+  " エスケープで去る
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+  nmap <buffer> <ESC><ESC> <Plug>(unite_exit)
+  " インサート脱出
+  imap <buffer> jj <Plug>(unite_insert_leave)
+  imap <buffer> kk <Plug>(unite_insert_leave)
+endfunction"}}}
+
+" unite key
+nnoremap [unite] <Nop>
+nmap     <Space>u [unite]
+nnoremap [unite]f :Unite file<Enter>
+nnoremap [unite]n :Unite file/new<Enter>
+nnoremap [unite]b :Unite buffer<Enter>
+nnoremap [unite]r :Unite file_mru<Enter>
+nnoremap [unite]s :Unite vcs_grep<Enter>
