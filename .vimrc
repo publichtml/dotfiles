@@ -20,6 +20,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'basyura/unite-rails'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -55,3 +56,13 @@ nnoremap [unite]n :Unite file/new<Enter>
 nnoremap [unite]b :Unite buffer<Enter>
 nnoremap [unite]r :Unite file_mru<Enter>
 nnoremap [unite]s :Unite vcs_grep<Enter>
+
+" unite-rails
+nnoremap [rails] <Nop>
+nmap     <Space>r [rails]
+nnoremap [rails]r :Unite rails/
+nnoremap [rails]c :Unite rails/controller<Enter>
+nnoremap [rails]v :Unite rails/view<Enter>
+nnoremap [rails]m :Unite rails/model<Enter>
+nnoremap [rails]h :Unite rails/helper<Enter>
+nnoremap [rails]s :Unite rails/spec<Enter
