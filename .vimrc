@@ -29,6 +29,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
