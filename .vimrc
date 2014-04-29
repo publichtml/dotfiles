@@ -35,6 +35,7 @@ NeoBundle 'gregsexton/gitv'
 "NeoBundle 'jpo/vim-railscasts-theme'
 "NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'tyru/caw.vim'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
