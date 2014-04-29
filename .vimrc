@@ -68,3 +68,13 @@ nnoremap [rails]v :Unite rails/view<Enter>
 nnoremap [rails]m :Unite rails/model<Enter>
 nnoremap [rails]h :Unite rails/helper<Enter>
 nnoremap [rails]s :Unite rails/spec<Enter
+
+" vim-fugitive
+nnoremap [git] <Nop>
+nmap     <Space>g [git]
+nnoremap [git]s :Gstatus<Enter>
+nnoremap [git]a :Gwrite<Enter>
+nnoremap [git]c :Gcommit<Enter>
+nnoremap [git]d :Gdiff<Enter>
+nnoremap [git]v :Gitv<Enter>
+nnoremap [git]b :Gblame<Enter>
