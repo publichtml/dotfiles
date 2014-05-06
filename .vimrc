@@ -107,3 +107,13 @@ let g:indent_guides_guide_size=1
 " caw.vim
 nmap <Leader>c <Plug>(caw:i:toggle)
 vmap <Leader>c <Plug>(caw:i:toggle)
+
+" ファイル保存時に行末の空白を削除する
+function! s:remove_dust()
+  let cursor = getpos(".")
+  " 保存時に行末の空白を除去する
+  %s/\s\+$//ge
+  call setpos(".", cursor)
+  unlet cursor
+endfunction
+autocmd BufWritePre * call <SID>remove_dust()
