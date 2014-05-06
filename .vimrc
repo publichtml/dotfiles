@@ -6,6 +6,8 @@ set autoindent
 set number
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 syntax on
 
 " NeoBundle
