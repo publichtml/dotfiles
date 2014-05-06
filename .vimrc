@@ -41,6 +41,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'tpope/vim-endwise'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
