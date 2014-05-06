@@ -81,6 +81,10 @@ nnoremap [rails]v :Unite rails/view<Enter>
 nnoremap [rails]m :Unite rails/model<Enter>
 nnoremap [rails]h :Unite rails/helper<Enter>
 nnoremap [rails]s :Unite rails/spec<Enter>
+nnoremap [rails]l :Unite rails/lib<Enter>
+nnoremap [rails]d :Unite rails/db<Enter>
+nnoremap [rails]cf :Unite rails/config<Enter>
+nnoremap [rails]log :Unite rails/log<Enter>
 
 " vim-fugitive
 nnoremap [git] <Nop>
