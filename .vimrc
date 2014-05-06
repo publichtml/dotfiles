@@ -80,7 +80,7 @@ nnoremap [rails]c :Unite rails/controller<Enter>
 nnoremap [rails]v :Unite rails/view<Enter>
 nnoremap [rails]m :Unite rails/model<Enter>
 nnoremap [rails]h :Unite rails/helper<Enter>
-nnoremap [rails]s :Unite rails/spec<Enter
+nnoremap [rails]s :Unite rails/spec<Enter>
 
 " vim-fugitive
 nnoremap [git] <Nop>
