@@ -1,0 +1,17 @@
+[user]
+  email = example@example.com
+  name = example
+
+[color]
+  ui = auto
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  lg = log --graph --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset:%C(red)%d%Creset %s %Cblue%cr %C(bold blue)%Creset'
+  br = branch
+
+[core]
+  excludesfile = ~/.gitignore
+	editor = vim
