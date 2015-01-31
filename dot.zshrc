@@ -74,3 +74,5 @@ eval "$(rbenv init -)"
 alias be='bundle exec'
 # override alias 'glog' by oh-my-zsh
 alias glog="git log --graph --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset:%C(red)%d%Creset %s %Cblue%cr %C(bold blue)%Creset'"
+
+[ -f ~/dotfiles/.zshrc.local ] && source ~/dotfiles/.zshrc.local
