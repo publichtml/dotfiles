@@ -130,3 +130,12 @@ function! s:remove_dust()
   unlet cursor
 endfunction
 autocmd BufWritePre * call <SID>remove_dust()
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" vim-rspecでspecを実行した時にvim-dispatchに渡してtmux上の別ペインで実行する
+let g:rspec_command = "Dispatch bundle exec rake spec SPEC={spec}"
