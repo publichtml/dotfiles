@@ -1,0 +1,5 @@
+# Rename this file to ".gitconfig.local" and write local settings
+
+[user]
+  email = example@example.com
+  name = example
