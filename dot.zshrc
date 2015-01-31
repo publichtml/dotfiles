@@ -74,9 +74,3 @@ eval "$(rbenv init -)"
 alias be='bundle exec'
 # override alias 'glog' by oh-my-zsh
 alias glog="git log --graph --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset:%C(red)%d%Creset %s %Cblue%cr %C(bold blue)%Creset'"
-
-# for Mac -----------------------------------------------------------------------
-# alias firefox="open -a Firefox"
-
-# Postgresql.app
-# PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
