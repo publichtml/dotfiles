@@ -140,3 +140,5 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " vim-rspecでspecを実行した時にvim-dispatchに渡してtmux上の別ペインで実行する
 let g:rspec_command = "Dispatch bundle exec rake spec SPEC={spec}"
+
+source ~/dotfiles/.vimrc.local
