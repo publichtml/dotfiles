@@ -10,6 +10,9 @@ set ignorecase
 set smartcase
 syntax on
 
+" for windows
+set backspace=indent,eol,start
+
 " NeoBundle
 set nocompatible               " be iMproved
 filetype off
