@@ -37,7 +37,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
-NeoBundle 'tomasr/molokai'
+" NeoBundle 'tomasr/molokai'
 "NeoBundle 'sickill/vim-monokai'
 "NeoBundle 'jpo/vim-railscasts-theme'
 "NeoBundle 'w0ng/vim-hybrid'
@@ -110,7 +110,8 @@ nnoremap [git]v :Gitv<Enter>
 nnoremap [git]b :Gblame<Enter>
 
 " vim-indent-guides
-colorscheme default
+" colorscheme default
+colorscheme koehler
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
