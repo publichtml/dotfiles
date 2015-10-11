@@ -13,16 +13,21 @@ syntax on
 " for windows
 set backspace=indent,eol,start
 
-" NeoBundle
-set nocompatible               " be iMproved
-filetype off
-
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+ " Required:
+ call neobundle#begin(expand('~/.vim/bundle/'))
+
+ " Let NeoBundle manage NeoBundle
+ " Required:
+ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
@@ -60,8 +65,15 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 
-filetype plugin indent on     " required!
-filetype indent on
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " uniteをインサートモードでスタート
 let g:unite_enable_start_insert = 1
