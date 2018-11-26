@@ -13,3 +13,17 @@ fi
 # Editor
 export EDITOR='vim'
 export VISUAL='vim'
+
+# Git command aliases (oh-my-zsh)
+alias ga='git add'
+alias gc!='git commit -v --amend'
+alias gca!='git commit -v -a --amend'
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias glog='git log --oneline --decorate --graph'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+alias grbs='git rebase --skip'
+alias gst='git status'
