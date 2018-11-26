@@ -27,3 +27,9 @@ alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
 alias grbs='git rebase --skip'
 alias gst='git status'
+
+# rbenv
+if [[ -d "$HOME/.rbenv/" ]]; then
+  export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
