@@ -33,3 +33,6 @@ if [[ -d "$HOME/.rbenv/" ]]; then
   export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# Source local zshrc
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
