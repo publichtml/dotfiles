@@ -11,6 +11,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
+  pager = less -r
 
 [include]
   path = ~/dotfiles/.gitconfig.local
