@@ -113,7 +113,7 @@ nnoremap [git]a :Gwrite<Enter>
 nnoremap [git]c :Gcommit<Enter>
 nnoremap [git]d :Gdiff<Enter>
 nnoremap [git]v :Gitv<Enter>
-nnoremap [git]b :Gblame<Enter>
+nnoremap [git]b :Git blame<Enter>
 
 " vim-indent-guides
 " colorscheme default
