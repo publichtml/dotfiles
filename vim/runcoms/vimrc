@@ -13,54 +13,27 @@ syntax on
 " for windows
 set backspace=indent,eol,start
 
-" https://knowledge.sakura.ad.jp/23248/
-" dein.vim settings {{{
-" install dir {{{
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-" }}}
+" vim-plug settings {{{
+let s:plug_dir = expand('~/.vim/plugged')
+let s:plug_vim = expand('~/.vim/autoload/plug.vim')
 
-" dein installation check {{{
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . s:dein_repo_dir
+if empty(glob(s:plug_vim))
+  execute '!curl -fLo ' . shellescape(s:plug_vim) . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-" }}}
 
-" begin settings {{{
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+call plug#begin(s:plug_dir)
 
-  " .toml file
-  let s:rc_dir = expand('~/.vim')
-  if !isdirectory(s:rc_dir)
-    call mkdir(s:rc_dir, 'p')
-  endif
-  let s:toml = s:rc_dir . '/dein.toml'
-
-  " read toml and cache
-  call dein#load_toml(s:toml, {'lazy': 0})
-
-  " end settings
-  call dein#end()
-  call dein#save_state()
+let s:rc_dir = expand('~/.vim')
+if !isdirectory(s:rc_dir)
+  call mkdir(s:rc_dir, 'p')
 endif
-" }}}
-
-" plugin installation check {{{
-if dein#check_install()
-  call dein#install()
+let s:plugin_list = s:rc_dir . '/plugins.vim'
+if filereadable(s:plugin_list)
+  execute 'source ' . fnameescape(s:plugin_list)
 endif
-" }}}
 
-" plugin remove check {{{
-let s:removed_plugins = dein#check_clean()
-if len(s:removed_plugins) > 0
-  call map(s:removed_plugins, "delete(v:val, 'rf')")
-  call dein#recache_runtimepath()
-endif
+call plug#end()
 " }}}
 
 " Required:

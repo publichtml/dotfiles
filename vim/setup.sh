@@ -11,7 +11,7 @@ done
 cp -n "$script_dir"/local/vimrc.local{.sample,}
 ln -s "$script_dir"/local/vimrc.local "$HOME/."vimrc.local
 
-# ~/.vim/dein.toml に symbolic link
-cp -n "$script_dir"/local/dein.toml.local{.sample,}
+# ~/.vim/plugins.vim に plugin list を symbolic link
+cp -n "$script_dir"/local/plugins.vim.local{.sample,}
 mkdir -p "$HOME/".vim
-ln -s "$script_dir"/local/dein.toml.local "$HOME/".vim/dein.toml
+ln -s "$script_dir"/local/plugins.vim.local "$HOME/".vim/plugins.vim
