@@ -13,5 +13,8 @@
   editor = vim
   pager = less -r
 
+[init]
+  defaultBranch = main
+
 [include]
   path = ~/dotfiles/.gitconfig.local
